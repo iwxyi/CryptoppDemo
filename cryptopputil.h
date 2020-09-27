@@ -483,7 +483,7 @@ public:
     }
 
 private:
-    static CryptoPP::CryptoppAPI crypto;
+    static inline CryptoPP::CryptoppAPI crypto;
 };
 
 #endif // CRYPTOPPUTIL_H
