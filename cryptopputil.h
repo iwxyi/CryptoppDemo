@@ -439,7 +439,11 @@ public:
 
     static QString DecryptString(const QString& instr, const QString& passPhrase)
     {
-        return QString::fromStdString(crypto.DecryptString(instr.toUtf8(), passPhrase.toUtf8()));
+        try { // 不一定能解密成功，加密后文本修改或者秘钥错误
+            return QString::fromStdString(crypto.DecryptString(instr.toUtf8(), passPhrase.toUtf8()));
+        } catch (...) {
+            return QString();
+        }
     }
 
     static void EncryptFile(const QString& in, const QString& out, const QString& passPhrase)

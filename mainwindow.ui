@@ -32,14 +32,14 @@
     <item>
      <widget class="QPushButton" name="pushButton">
       <property name="text">
-       <string>加密</string>
+       <string>MAC加密</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QPushButton" name="pushButton_2">
       <property name="text">
-       <string>解密</string>
+       <string>MAC解密</string>
       </property>
      </widget>
     </item>
